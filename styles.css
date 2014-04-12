@@ -60,6 +60,15 @@ nav a.active {
 	top: 2px;
 }
 
+
+.form-modal .login-form-btn{
+	display:hidden;
+}
+
+.signup-form-btn{
+	display:hidden;
+}
+
 .form-row {
 	clear: both;
 	margin: 0 0 10px 0;

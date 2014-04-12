@@ -31,6 +31,62 @@ Reponse Objects:
 
 $('document').ready(function() {
 
-	//put code here
+//LOGIN---SIGNUP NAV
+	$(".signup-form").hide();
+
+		$(".signup-form-btn").click(function(){		//SIGN UP BUTTON
+			$(".signup-form").show();
+			$(".signup-form-btn").addClass("active");
+			$(".login-form-btn").removeClass("active");
+			$(".login-form").hide();
+
+	});
+		$(".login-form-btn").click(function(){		//LOGIN BUTTON
+			$(".login-form").show();
+			$(".login-form-btn").addClass("active");
+			$(".signup-form-btn").removeClass("active");
+			$(".signup-form").hide();
+	});
+
+//NEW USER
+
+	var user_object = {};	//BLANK OBJECT
+
+
+	$(".btn-login").click(function(){
+		user_object.username = $("#login-username-field").val(); // APPLIES USERNAME INPUT TO BLANK OBJECT user_object.username
+		user_object.password = $("#login-password-field").val(); // APPLIES USERNAME INPUT TO BLANK OBJECT user_object.username
+		
+		codepen.api.login(user_object);
+		console.log(codepen.api.login(user_object));
+
+		alert(codepen.api.login(user_object).error);
+
+	});
+
+
+
+
+
+
+
+
 
 });
+
+
+
+
+		// if (codepen.api.login(user_object).success = false){
+
+		// 	alert(codepen.api.login(user_object).error);
+
+		// }else{ 
+
+		// 	alert("Welcome");
+		// };
+
+// $("btn-signup").submit('codepen.api.login').val();
+
+
+
